@@ -1,0 +1,9 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.miku.frameworkresoverlay">
+
+    <application android:hasCode="false" />
+    <overlay android:targetPackage="android"
+                   android:isStatic="true"
+                   android:priority="999"/>
+                   
+</manifest>
