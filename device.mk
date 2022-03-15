@@ -34,6 +34,10 @@ PRODUCT_BUILD_SUPER_PARTITION := false
 # Boot animation
 TARGET_BOOT_ANIMATION_RES := 1080
 
+# Interfaces
+include $(LOCAL_PATH)/configs/props/vendor_prop.mk
+PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
+
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio.effect@6.0-impl \
