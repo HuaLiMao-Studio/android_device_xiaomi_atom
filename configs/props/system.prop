@@ -1,23 +1,88 @@
-# Audio
-ro.config.vc_call_vol_steps=7
-ro.config.media_vol_steps=15
+#
+# system.prop for generic sdk
+#
+vendor.rild.libpath=mtk-ril.so
+vendor.rild.libargs=-d /dev/ttyC0
+
+# MTK, Infinity, 20090720 {
+wifi.interface=wlan0
+
+# MTK, Infinity, 20090720 }
+# MTK, mtk03034, 20101210 {
+ro.mediatek.wlan.wsc=1
+
+# MTK, mtk03034 20101210}
+# MTK, mtk03034, 20110318 {
+ro.mediatek.wlan.p2p=1
+
+# MTK, mtk03034 20110318}
+# MTK, mtk03034, 20101213 {
+mediatek.wlan.ctia=0
+
+# MTK, mtk03034 20101213}
+#
+wifi.tethering.interface=ap0
+#
+
+ro.opengles.version=196610
+#ro.kernel.qemu=1
+#ro.kernel.qemu.gles=0
+wifi.direct.interface=p2p0
+#dalvik.vm.heapgrowthlimit=256m
+#dalvik.vm.heapsize=512m
+
+# USB MTP WHQL
+ro.sys.usb.mtp.whql.enable=0
+ro.sys.usb.storage.type=mtp
+
+# USB BICR function
+ro.sys.usb.bicr=no
+
+# USB Charge only function
+ro.sys.usb.charging.only=yes
+
+# audio
 ro.camera.sound.forced=0
 ro.audio.silent=0
+ro.zygote.preload.enable=0
 
-# Brand
-Build.BRAND=MTK
+# temporary enables NAV bar (soft keys)
+qemu.hw.mainkeys=0
+ro.kernel.zio=38,108,105,16
 
-# USB
-persist.vendor.quick.charge=1
+# Disable dirty region for Mali
+#debug.hwui.render_dirty_regions=false
+ro.sf.lcd_density=440
 
-# WIFI
-wifi.tethering.interface=ap0
-wifi.direct.interface=p2p0
-ro.vendor.net.enable_dual_wifi=1
-wifi.interface=wlan0
-ro.mediatek.wlan.wsc=1
-ro.mediatek.wlan.p2p=1
-mediatek.wlan.ctia=0
+# performance
+ro.mtk_perf_simple_start_win=1
+ro.mtk_perf_fast_start_win=1
+ro.mtk_perf_response_time=1
+
+#set aee mode enable
+persist.vendor.aeev.core.dump=enable
+ro.vendor.aee.enforcing=no
+
+#logd buffer_size
+ro.logd.size=2M
+
+#audio-add for misound
+ro.vendor.audio.soundfx.type=mi
+ro.vendor.audio.soundfx.usb=true
+
+#audio-add for soudtrigger
+ro.vendor.audio.soundtrigger=mtk
+ro.vendor.audio.soundtrigger.lowpower=true
+
+#audio-add for SoS
+ro.vendor.audio.sos=true
+
+#audio add vc default volume
+ro.config.vc_call_vol_default=4
+
+#Telephony features controller
+#value: 0000 0010
+ro.vendor.radio.features_common=2
 
 # Bluetooth
 persist.bluetooth.bluetooth_audio_hal.disabled=true

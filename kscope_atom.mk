@@ -24,4 +24,4 @@ PRODUCT_MANUFACTURER := Xiaomi
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
-BUILD_FINGERPRINT := Redmi/atom/atom:11/RP1A.200720.011/22.3.2:user/release-keys
+BUILD_FINGERPRINT := Redmi/atom/atom:12/SP1A.210812.016/22.3.29:user/release-keys

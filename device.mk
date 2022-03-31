@@ -91,6 +91,10 @@ PRODUCT_PACKAGES += \
     android.hardware.memtrack@1.0-service \
     libvulkan
 
+# Fstab
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/etc/fstab.mt6873:$(TARGET_COPY_OUT_RAMDISK)/fstab.mt6873
+
 # HIDL
 PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
