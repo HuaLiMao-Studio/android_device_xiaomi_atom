@@ -20,18 +20,13 @@ PRODUCT_SHIPPING_API_LEVEL := 29
 PRODUCT_TARGET_VNDK_VERSION := 31
 PRODUCT_EXTRA_VNDK_VERSIONS := 30 31
 
-# Overlays
-DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay
-
-# Overlay -- remove
+# Runtime Overlays
 PRODUCT_PACKAGES += \
-    CellbroadcastUIResOverlay \
-    FrameworkResOverlay \
-    FrameworkResOverlayExt \
-    SettingsProviderResOverlay \
-    SystemUIResOverlay \
-    WifiResOverlay
+   CarrierConfigOverlayAtom \
+   FrameworksResOverlayAtom \
+   SettingsOverlayAtom \
+   SystemUIOverlayAtom \
+   TelephonyOverlayAtom
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
@@ -42,6 +37,10 @@ PRODUCT_SOONG_NAMESPACES += \
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_BUILD_SUPER_PARTITION := false 
 
+# Audio 
+PRODUCT_PACKAGES += \
+    audio.a2dp.default
+ 
 # Camera
 PRODUCT_PACKAGES += \
     CameraGo
@@ -52,6 +51,13 @@ PRODUCT_COPY_FILES += \
 # Fingerprint
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.3-service.xiaomi_mt6873
+
+# HIDL 
+PRODUCT_PACKAGES += \
+    android.hidl.base@1.0 \
+    android.hidl.manager@1.0 \
+    libhidltransport \
+    libhwbinder
 
 # Init
 PRODUCT_PACKAGES += \

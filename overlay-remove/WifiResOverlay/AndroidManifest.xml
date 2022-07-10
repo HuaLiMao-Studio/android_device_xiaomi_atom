@@ -1,4 +1,0 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="30" android:compileSdkVersionCodename="11" package="com.android.wifi.resources.overlay" platformBuildVersionCode="30" platformBuildVersionName="11">
-    <application android:extractNativeLibs="false"/>
-    <overlay android:isStatic="true" android:priority="1000" android:targetPackage="com.android.wifi.resources"/>
-</manifest>
