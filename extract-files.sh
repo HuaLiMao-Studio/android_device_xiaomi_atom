@@ -15,9 +15,9 @@ VENDOR=xiaomi
 MY_DIR="${BASH_SOURCE%/*}"
 if [[ ! -d "${MY_DIR}" ]]; then MY_DIR="${PWD}"; fi
 
-ANDROID_ROOT="${MY_DIR}/../../.."
+AOSP_ROOT="${MY_DIR}/../../.."
 
-HELPER="${ANDROID_ROOT}/tools/extract-utils/extract_utils.sh"
+HELPER="${AOSP_ROOT}/tools/extract-utils/extract_utils.sh"
 if [ ! -f "${HELPER}" ]; then
     echo "Unable to find helper script at ${HELPER}"
     exit 1
@@ -50,13 +50,25 @@ while [ "${#}" -gt 0 ]; do
 done
 
 if [ -z "${SRC}" ]; then
-    SRC="adb"
+    SRC=adb
 fi
 
-# Initialize the helper
-setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}" true "${CLEAN_VENDOR}"
+function blob_fixup() {
+    case "${1}" in
+        # Load audio shim
+        vendor/lib/hw/audio.primary.mt6873.so)
+            patchelf --add-needed libshim_audio.so ${2}
+            ;;
+        # Load VNDK-30 version of libutils
+        vendor/lib64/libmtkcam_stdutils.so)
+            patchelf --replace-needed libutils.so libutils-v30.so ${2}
+            ;;
+    esac
+}
 
-extract "${MY_DIR}/proprietary-files.txt" "${SRC}" \
-        "${KANG}" --section "${SECTION}"
+# Initialize the helper
+setup_vendor "${DEVICE}" "${VENDOR}" "${AOSP_ROOT}" false "${CLEAN_VENDOR}"
+
+extract "${MY_DIR}/proprietary-files.txt" "${SRC}" ${KANG} --section "${SECTION}"
 
 "${MY_DIR}/setup-makefiles.sh"
