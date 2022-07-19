@@ -33,15 +33,11 @@ system_ext/lib64/vendor.mediatek.hardware.audio@6.1.so
 vendor/bin/hw/android.hardware.audio.service.mediatek
 vendor/etc/init/android.hardware.audio.service.mediatek.rc
 vendor/lib/hw/android.hardware.audio@6.0-impl-mediatek.so
-vendor/lib/hw/audio.primary.default.so
 vendor/lib/hw/audio.primary.mt6873.so
-vendor/lib/hw/audio.r_submix.default.so
 vendor/lib/hw/audio.r_submix.mt6873.so
-vendor/lib/hw/audio.usb.default.so
 vendor/lib/hw/audio.usb.mt6873.so
 vendor/lib/vendor.mediatek.hardware.audio@6.1.so
 vendor/lib64/hw/android.hardware.audio@6.0-impl-mediatek.so
-vendor/lib64/hw/audio.primary.default.so
 vendor/lib64/hw/audio.primary.mt6873.so
 vendor/lib64/hw/audio.r_submix.mt6873.so
 vendor/lib64/hw/audio.usb.mt6873.so
@@ -1230,7 +1226,6 @@ vendor/etc/init/android.hardware.wifi.supplicant-service.rc
 vendor/etc/init/android.hardware.wifi@1.0-service-lazy.rc
 vendor/etc/init/android.hardware.wifi.supplicant-service.rc
 -vendor/etc/vintf/manifest/android.hardware.wifi.hostapd.xml
--vendor/etc/vintf/manifest/android.hardware.wifi@1.0-service.xml
 vendor/lib/libwapi.so
 vendor/lib64/libwapi.so
 vendor/lib64/libwpa_client.so
@@ -1339,21 +1334,12 @@ system_ext/bin/mdlogger
 system_ext/bin/rtt
 system_ext/bin/trace
 system_ext/etc/aee-config
-system_ext/etc/compatconfig/settings-platform-compat-config.xml
 system_ext/etc/custom.conf
-system_ext/etc/group
 system_ext/etc/init/emdlogger1.rc
 system_ext/etc/init/emdlogger2.rc
 system_ext/etc/init/emdlogger3.rc
 system_ext/etc/init/emdlogger5.rc
 system_ext/etc/init/mdlogger.rc
-system_ext/etc/permissions/com.android.carrierconfig.xml
-system_ext/etc/permissions/com.android.emergency.xml
-system_ext/etc/permissions/com.android.settings.xml
-system_ext/etc/permissions/com.android.storagemanager.xml
-system_ext/etc/permissions/com.android.systemui.xml
-system_ext/etc/permissions/privapp-permissions-google-system-ext.xml
-system_ext/etc/permissions/privapp-permissions-miui-settings.xml
 system_ext/etc/permissions/system-ext-permissions-mediatek.xml
 system_ext/lib/drm/cta/libdrmctaplugin.so
 system_ext/lib/libaed.so
@@ -1482,25 +1468,12 @@ vendor/bin/vpud
 vendor/bin/watch
 vendor/data/misc/ProjectConfig.mk
 vendor/etc/.tp/.ht120.mtc
-vendor/etc/102_SummerDay.png
-vendor/etc/103_Fantasy.png
-vendor/etc/104_Meet.png
-vendor/etc/105_WindSing.png
-vendor/etc/106_Lost.png
-vendor/etc/107_Central.png
-vendor/etc/108_NorthernEurope.png
-vendor/etc/109_Rome.png
-vendor/etc/110_BlackGold.png
-vendor/etc/111_GreenOrange.png
-vendor/etc/112_Cyberpunk.png
-vendor/etc/113_BlackIce.png
 vendor/etc/a2dp_in_audio_policy_configuration.xml
 vendor/etc/aee-config
 vendor/etc/apdb/APDB_MT6873_S01__W2041
 vendor/etc/apdb/APDB_MT6873_S01__W2041_ENUM
 vendor/etc/aurisys_config.xml
 vendor/etc/aurisys_config_hifi3.xml
-vendor/etc/cs35l41_cal.wav
 vendor/etc/device_features/atom.xml
 vendor/etc/ecc_list.xml
 vendor/etc/ecc_list_OP01.xml
@@ -1574,8 +1547,6 @@ vendor/etc/pm_test_item_config.xml
 vendor/etc/powercontable.xml
 vendor/etc/powerscntbl.xml
 vendor/etc/power_app_cfg.xml
-vendor/etc/rcv.wav
-vendor/etc/rcv_pink.wav
 vendor/etc/screen_light.xml
 
 vendor/etc/sla/slad.conf
@@ -1584,10 +1555,7 @@ vendor/etc/smartpa_param/rt5509_param
 vendor/etc/smartpa_param/rt_device.xml
 vendor/etc/smsdbvisitor.xml
 vendor/etc/special_pws_channel.xml
-vendor/etc/spk.wav
-vendor/etc/spk_hp.wav
 vendor/etc/spn-conf-op09.xml
-vendor/etc/stereo.wav
 vendor/etc/task_profiles.json
 vendor/etc/throttle.sh
 vendor/etc/usb_audio_accessory_only_policy_configuration.xml
@@ -1948,16 +1916,19 @@ vendor/lib64/vendor.qti.sla.service@1.0.so
 vendor/lib64/vendor.rongcard.hardware.eid@1.0.so
 
 # Keymaster
-vendor/bin/hw/android.hardware.keymaster@4.0-service.beanpod
 vendor/bin/hw/vendor.mediatek.hardware.keymaster_attestation@1.1-service
-vendor/etc/init/android.hardware.keymaster@4.0-service.beanpod.rc
 vendor/etc/init/vendor.mediatek.hardware.keymaster_attestation@1.1-service.rc
-vendor/lib/libkeystore-wifi-hidl.so
 vendor/lib64/vendor.mediatek.hardware.keymaster_attestation@1.0.so
 vendor/lib64/vendor.mediatek.hardware.keymaster_attestation@1.1.so
 vendor/lib64/hw/vendor.mediatek.hardware.keymaster_attestation@1.1-impl.so
+
+
+# keystore
+vendor/lib/libkeystore-wifi-hidl.so
 vendor/lib64/libkeystore-engine-wifi-hidl.so
 vendor/lib64/libkeystore-wifi-hidl.so
+
+vendor/lib64/libwifi-hal.so
 
 # Kmsetkey
 vendor/bin/bp_kmsetkey_ca

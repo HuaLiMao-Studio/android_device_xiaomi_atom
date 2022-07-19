@@ -43,6 +43,7 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.effect@6.0-impl \
     android.hardware.soundtrigger@2.3-impl \
     android.hardware.bluetooth.audio@2.0-impl \
+    audio.primary.default \
     audio.a2dp.default \
     audio.bluetooth.default \
     audio.r_submix.default \
@@ -169,6 +170,7 @@ PRODUCT_PACKAGES += \
     libpuresoftkeymasterdevice.vendor:64 \
 
 PRODUCT_PACKAGES += \
+    android.hardware.keymaster@4.0-service \
     android.hardware.keymaster@4.0.vendor
 
 # Media
@@ -254,6 +256,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libtinyxml \
     libtinyxml.vendor
+
+# Vendor service
+PRODUCT_PACKAGES += \
+    vndservice \
+    vndservicemanager
 
 # VNDK v30 Coppy Files
 PRODUCT_COPY_FILES += \
