@@ -151,6 +151,9 @@ PRODUCT_PACKAGES += \
     libhwbinder.vendor \
     libunwindstack.vendor
 
+# Light
+PRODUCT_PACKAGES += android.hardware.light-service.xiaomi_atom
+
 # Ims Shim
 PRODUCT_PACKAGES += \
     libshim_vtservice
