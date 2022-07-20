@@ -37,8 +37,9 @@ TARGET_NO_BOOTLOADER := true
 TARGET_USES_UEFI := true
 
 # Broken Rules
+BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
-
+BUILD_BROKEN_VENDOR_PROPERTY_NAMESPACE := true
 # Charger
 BOARD_CHARGER_ENABLE_SUSPEND := true
 
@@ -72,7 +73,10 @@ TARGET_SURFACEFLINGER_UDFPS_LIB := //$(DEVICE_PATH):libudfps_extension.xiaomi_mt
 TARGET_USES_FOD_ZPOS := true
 
 # HIDL
-DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/config/vintf/manifest.xml
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += $(DEVICE_PATH)/config/vintf/compatibility_matrix.device.xml
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += $(DEVICE_PATH)/config/vintf/compatibility_matrix.xiaomi.xml
+DEVICE_MATRIX_FILE += $(DEVICE_PATH)/config/vintf/compatibility_matrix.xml
+DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/config/vintf/manifest.xml
 
 # Kernel
 BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/dtbo.img
@@ -143,10 +147,6 @@ TARGET_USES_MKE2FS := true
 # Releasetools
 TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
 
-# Sepolicy
-TARGET_USES_PREBUILT_VENDOR_SEPOLICY := true
-TARGET_HAS_FUSEBLK_SEPOLICY_ON_VENDOR := true
-
 # Verified Boot
 BOARD_AVB_ENABLE := true
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --set_hashtree_disabled_flag
@@ -167,6 +167,7 @@ include device/mediatek/sepolicy_vndr/SEPolicy.mk
 ENABLE_VENDOR_RIL_SERVICE := true
 
 # VNDK
+BOARD_VNDK_VERSION := current
 PRODUCT_VENDOR_MOVE_ENABLED := true
 
 # Inherit from the proprietary version
