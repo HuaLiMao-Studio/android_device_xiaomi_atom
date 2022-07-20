@@ -263,7 +263,9 @@ PRODUCT_PACKAGES += \
 # Vendor service
 PRODUCT_PACKAGES += \
     vndservice \
-    vndservicemanager
+    vndservicemanager \
+    libvndksupport \
+    libvndksupport.vendor
 
 # VNDK v30 Coppy Files
 PRODUCT_COPY_FILES += \
@@ -273,7 +275,7 @@ PRODUCT_COPY_FILES += \
 # Shims
 PRODUCT_PACKAGES += \
     ImsServiceBase \
-    libshim_vtservice
+    libshim_vtservice \
 
 # Telephony
 PRODUCT_BOOT_JARS += \
