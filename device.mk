@@ -214,6 +214,11 @@ PRODUCT_PACKAGES += \
     partition_permission.sh \
     throttle.sh
 
+# Power
+PRODUCT_PACKAGES += \
+    android.hardware.power-V1-ndk_platform \
+    android.hardware.power-V1-ndk_platform.vendor
+
 # Radio
 PRODUCT_PACKAGES += \
     android.hardware.radio@1.5.vendor \
