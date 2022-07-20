@@ -198,10 +198,14 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libavservices_minijail.vendor
 
+# Netd
+PRODUCT_PACKAGES += \
+    libnetd_resolv
+
 # Network
 PRODUCT_PACKAGES += \
     android.hardware.neuralnetworks@1.3.vendor
-    
+
 # Init
 PRODUCT_PACKAGES += \
     fstab.mt6873 \
