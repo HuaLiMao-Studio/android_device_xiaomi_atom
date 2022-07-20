@@ -177,6 +177,10 @@ PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.0-service \
     android.hardware.keymaster@4.0.vendor
 
+# Keystore
+PRODUCT_PACKAGES += \
+    android.system.keystore2
+
 # Media
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/config/media/,$(TARGET_COPY_OUT_VENDOR)/etc)
