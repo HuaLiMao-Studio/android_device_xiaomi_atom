@@ -344,14 +344,4 @@
         <transport>hwbinder</transport>
         <fqname>@1.0::ISlaService/default</fqname>
     </hal>
-    <hal format="hidl">
-        <name>vendor.xiaomi.hardware.touchfeature</name>
-        <transport>hwbinder</transport>
-        <fqname>@1.0::ITouchFeature/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.xiaomi.hardware.vibratorfeature</name>
-        <transport>hwbinder</transport>
-        <fqname>@1.0::IVibratorFeature/default</fqname>
-    </hal>
 </manifest>

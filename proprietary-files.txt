@@ -828,25 +828,12 @@ vendor/lib64/hw/android.hardware.graphics.mapper@4.0-impl-mediatek.so
 vendor/lib64/hw/gralloc.default.so
 vendor/lib64/hw/hwcomposer.mt6873.so
 vendor/lib64/hw/memtrack.mt6873.so
-vendor/lib64/vendor.xiaomi.hardware.displayfeature@1.0.so
-
-# Fido
-vendor/bin/fidoca
-vendor/etc/init/vendor.xiaomi.hardware.mfidoca@1.0-service.rc
--vendor/etc/vintf/manifest/manifest_vendor.xiaomi.hardware.mfidoca.xml
-vendor/lib/libmfido.so
-vendor/lib/vendor.xiaomi.hardware.mfidoca@1.0.so
-vendor/lib64/libmfido.so
-vendor/lib64/vendor.xiaomi.hardware.mfidoca@1.0.so
 
 # Fingerprint
 vendor/lib/hw/fingerprint.goodix_fod.so
 vendor/lib/libgf_hal.so
-vendor/lib/vendor.goodix.hardware.biometrics.fingerprint@2.1.so
 vendor/lib64/hw/fingerprint.goodix_fod.so
 vendor/lib64/libgf_hal.so
-vendor/lib64/vendor.goodix.hardware.biometrics.fingerprint@2.1.so
-vendor/lib64/vendor.xiaomi.hardware.fingerprintextension@1.0.so
 
 # Firmware
 vendor/firmware/AcousticGuitar_RTP.bin
@@ -1203,15 +1190,9 @@ vendor/lib64/hw/power.mt6873.so
 
 # Vibrator
 vendor/bin/hw/vendor.mtk.hardware.vibrator@1.2-service
-vendor/bin/hw/vendor.xiaomi.hardware.vibratorfeature@1.0-service
 vendor/etc/init/vendor.mtk.hardware.vibrator@1.2-service.rc
-vendor/etc/init/vendor.xiaomi.hardware.vibratorfeature@1.0-service.rc
-vendor/lib/hw/vendor.xiaomi.hardware.vibratorfeature@1.0-impl.so
 vendor/lib/hw/vibrator.default.so
-vendor/lib/vendor.xiaomi.hardware.vibratorfeature@1.0.so
-vendor/lib64/hw/vendor.xiaomi.hardware.vibratorfeature@1.0-impl.so
 vendor/lib64/hw/vibrator.default.so
-vendor/lib64/vendor.xiaomi.hardware.vibratorfeature@1.0.so
 
 # WiFi
 bin/iwpriv
@@ -1229,69 +1210,6 @@ vendor/etc/init/android.hardware.wifi.supplicant-service.rc
 vendor/lib/libwapi.so
 vendor/lib64/libwapi.so
 vendor/lib64/libwpa_client.so
-
-# Xiaomi
-vendor/bin/hw/vendor.xiaomi.hardware.misys@1.0-service
-vendor/bin/hw/vendor.xiaomi.hardware.misys@2.0-service
-vendor/bin/hw/vendor.xiaomi.hardware.misys@3.0-service
-vendor/bin/hw/vendor.xiaomi.hardware.touchfeature@1.0-service
-vendor/bin/mlipayd@1.1
-vendor/bin/tidad@1.1
-vendor/bin/vendor.xiaomi.hardware.otrpagent@2.0-service
-vendor/etc/init/vendor.xiaomi.hardware.misys@1.0-service.rc
-vendor/etc/init/vendor.xiaomi.hardware.misys@2.0-service.rc
-vendor/etc/init/vendor.xiaomi.hardware.misys@3.0-service.rc
-vendor/etc/init/vendor.xiaomi.hardware.mlipay@1.1-service.rc
-vendor/etc/init/vendor.xiaomi.hardware.otrpagent@2.0-service.rc
-vendor/etc/init/vendor.xiaomi.hardware.tidaservice@1.1-service.rc
-vendor/etc/init/vendor.xiaomi.hardware.touchfeature@1.0-service.rc
-vendor/etc/init/vendor.xiaomi.hardware.vsimapp@1.0-service.rc
--vendor/etc/vintf/manifest/manifest_vendor.xiaomi.hardware.mlipay.xml
--vendor/etc/vintf/manifest/manifest_vendor.xiaomi.hardware.otrpagent@2.0.xml
--vendor/etc/vintf/manifest/manifest_vendor.xiaomi.hardware.tidaservice.xml
--vendor/etc/vintf/manifest/manifest_vendor.xiaomi.hardware.vsimapp.xml
--vendor/etc/vintf/manifest/vendor.xiaomi.hardware.misys@1.0.xml
--vendor/etc/vintf/manifest/vendor.xiaomi.hardware.misys@2.0.xml
--vendor/etc/vintf/manifest/vendor.xiaomi.hardware.misys@3.0.xml
-vendor/lib/hw/vendor.xiaomi.hardware.citsensorservice@1.1-impl.so
-vendor/lib/hw/vendor.xiaomi.hardware.micharge@1.0-impl.so
-vendor/lib/hw/vendor.xiaomi.hardware.misys@1.0-impl.so
-vendor/lib/hw/vendor.xiaomi.hardware.misys@2.0-impl.so
-vendor/lib/hw/vendor.xiaomi.hardware.misys@3.0-impl.so
-vendor/lib/hw/vendor.xiaomi.hardware.touchfeature@1.0-impl.so
-vendor/lib/libmlipay.so
-vendor/lib/libmlipay@1.1.so
-vendor/lib/libtida@1.1.so
-vendor/lib/vendor.xiaomi.hardware.micharge@1.0.so
-vendor/lib/vendor.xiaomi.hardware.misys@1.0.so
-vendor/lib/vendor.xiaomi.hardware.misys@2.0.so
-vendor/lib/vendor.xiaomi.hardware.misys@3.0.so
-vendor/lib/vendor.xiaomi.hardware.mlipay@1.0.so
-vendor/lib/vendor.xiaomi.hardware.mlipay@1.1.so
-vendor/lib/vendor.xiaomi.hardware.tidaservice@1.0.so
-vendor/lib/vendor.xiaomi.hardware.tidaservice@1.1.so
-vendor/lib/vendor.xiaomi.hardware.touchfeature@1.0.so
-vendor/lib/vendor.xiaomi.hardware.vsimapp@1.0.so
-vendor/lib64/hw/vendor.xiaomi.hardware.micharge@1.0-impl.so
-vendor/lib64/hw/vendor.xiaomi.hardware.misys@1.0-impl.so
-vendor/lib64/hw/vendor.xiaomi.hardware.misys@2.0-impl.so
-vendor/lib64/hw/vendor.xiaomi.hardware.misys@3.0-impl.so
-vendor/lib64/hw/vendor.xiaomi.hardware.touchfeature@1.0-impl.so
-vendor/lib64/libmlipay.so
-vendor/lib64/libmlipay@1.1.so
-vendor/lib64/libtida@1.1.so
-vendor/lib64/vendor.xiaomi.hardware.micharge@1.0.so
-vendor/lib64/vendor.xiaomi.hardware.misys@1.0.so
-vendor/lib64/vendor.xiaomi.hardware.misys@2.0.so
-vendor/lib64/vendor.xiaomi.hardware.misys@3.0.so
-vendor/lib64/vendor.xiaomi.hardware.mlipay@1.0.so
-vendor/lib64/vendor.xiaomi.hardware.mlipay@1.1.so
-vendor/lib64/vendor.xiaomi.hardware.otrpagent@2.0-impl.so
-vendor/lib64/vendor.xiaomi.hardware.otrpagent@2.0.so
-vendor/lib64/vendor.xiaomi.hardware.tidaservice@1.0.so
-vendor/lib64/vendor.xiaomi.hardware.tidaservice@1.1.so
-vendor/lib64/vendor.xiaomi.hardware.touchfeature@1.0.so
-vendor/lib64/vendor.xiaomi.hardware.vsimapp@1.0.so
 
 # rootdir
 system_ext/bin/emdlogger1
