@@ -167,7 +167,6 @@ include device/mediatek/sepolicy_vndr/SEPolicy.mk
 ENABLE_VENDOR_RIL_SERVICE := true
 
 # VNDK
-BOARD_VNDK_VERSION := current
 PRODUCT_VENDOR_MOVE_ENABLED := true
 
 # Inherit from the proprietary version
