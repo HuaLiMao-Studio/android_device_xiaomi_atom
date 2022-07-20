@@ -265,6 +265,13 @@ PRODUCT_PACKAGES += \
     libtinyxml \
     libtinyxml.vendor
 
+# USB
+PRODUCT_PACKAGES += \
+    android.hardware.usb@1.1 \
+    android.hardware.usb@1.1.vendor \
+    android.hardware.usb.gadget@1.1 \
+    android.hardware.usb.gadget@1.1.vendor
+
 # Vendor service
 PRODUCT_PACKAGES += \
     vndservice \
